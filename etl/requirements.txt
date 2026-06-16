@@ -1,0 +1,10 @@
+# Python ETL pipeline dependencies (Python 3.10+).
+requests>=2.31
+SQLAlchemy>=2.0
+fpdf2>=2.7
+pytest>=8.0
+
+# For a Postgres / Neon DATABASE_URL, also install a driver:
+#   pip install "psycopg[binary]>=3.1"
+# and use a URL like:
+#   postgresql+psycopg://USER:PASSWORD@HOST/DB?sslmode=require

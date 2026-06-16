@@ -1,0 +1,21 @@
+node_modules
+dist
+.netlify
+.env
+.env.*
+*.local
+.DS_Store
+npm-debug.log*
+
+# Python ETL pipeline
+__pycache__/
+*.pyc
+.pytest_cache/
+etl/warehouse.db
+etl/.cache/
+etl/.logs/
+etl_output/
+
+# Local scratch notes (contains secrets) and local tool settings
+anushka.txt
+.claude/

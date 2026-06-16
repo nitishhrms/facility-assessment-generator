@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# Friendly path for the serverless proxy so the same /api/cms URL
+# works in `netlify dev`, in production, and via the Vite dev middleware.
+[[redirects]]
+  from = "/api/cms"
+  to = "/.netlify/functions/cms"
+  status = 200
+
+# AI insights serverless endpoint (short, stateless Claude call).
+[[redirects]]
+  from = "/api/insights"
+  to = "/.netlify/functions/insights"
+  status = 200
+
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
